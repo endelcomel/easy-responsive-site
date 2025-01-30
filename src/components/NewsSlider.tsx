@@ -42,7 +42,7 @@ const NewsSlider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden">
+    <div className="relative w-full h-[250px] md:h-[400px] overflow-hidden rounded-lg">
       {headlines.map((headline, index) => (
         <div
           key={headline.id}
@@ -55,11 +55,11 @@ const NewsSlider = () => {
             alt={headline.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
-            <span className="text-primary font-semibold mb-2 inline-block">
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 md:p-6">
+            <span className="text-primary text-sm md:text-base font-semibold mb-1 md:mb-2 inline-block">
               {headline.category}
             </span>
-            <h2 className="text-white text-2xl md:text-3xl font-bold">
+            <h2 className="text-white text-lg md:text-2xl lg:text-3xl font-bold line-clamp-2">
               <a href={headline.url} className="hover:text-primary transition-colors">
                 {headline.title}
               </a>
@@ -70,16 +70,18 @@ const NewsSlider = () => {
       
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white hover:bg-black/70 transition-colors"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black/50 p-1.5 md:p-2 rounded-full text-white hover:bg-black/70 transition-colors"
+        aria-label="Previous slide"
       >
-        <ChevronLeft className="h-6 w-6" />
+        <ChevronLeft className="h-4 w-4 md:h-6 md:w-6" />
       </button>
       
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white hover:bg-black/70 transition-colors"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black/50 p-1.5 md:p-2 rounded-full text-white hover:bg-black/70 transition-colors"
+        aria-label="Next slide"
       >
-        <ChevronRight className="h-6 w-6" />
+        <ChevronRight className="h-4 w-4 md:h-6 md:w-6" />
       </button>
     </div>
   );
