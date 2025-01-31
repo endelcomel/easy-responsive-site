@@ -37,6 +37,22 @@ const menuItems = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [timeoutId, setTimeoutId] = useState<number | null>(null);
+
+  const handleMouseEnter = (title: string) => {
+    if (timeoutId) {
+      window.clearTimeout(timeoutId);
+      setTimeoutId(null);
+    }
+    setActiveSubmenu(title);
+  };
+
+  const handleMouseLeave = () => {
+    const id = window.setTimeout(() => {
+      setActiveSubmenu(null);
+    }, 300); // 300ms delay before closing
+    setTimeoutId(id);
+  };
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -54,8 +70,8 @@ const Header = () => {
               <div
                 key={item.title}
                 className="relative group"
-                onMouseEnter={() => setActiveSubmenu(item.title)}
-                onMouseLeave={() => setActiveSubmenu(null)}
+                onMouseEnter={() => handleMouseEnter(item.title)}
+                onMouseLeave={handleMouseLeave}
               >
                 <a
                   href={item.path}
@@ -65,7 +81,11 @@ const Header = () => {
                   {item.submenu && <ChevronDown className="ml-1 h-4 w-4" />}
                 </a>
                 {item.submenu && activeSubmenu === item.title && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                  <div 
+                    className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+                    onMouseEnter={() => handleMouseEnter(item.title)}
+                    onMouseLeave={handleMouseLeave}
+                  >
                     {item.submenu.map((subitem) => (
                       <a
                         key={subitem.title}
