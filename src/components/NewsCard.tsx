@@ -13,8 +13,12 @@ const NewsCard = ({ title, image, category, excerpt, url, date }: NewsCardProps)
       <a href={url} className="block aspect-[16/9] overflow-hidden">
         <img 
           src={image} 
-          alt={title} 
+          alt={title}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300" 
+          width="400"
+          height="225"
         />
       </a>
       <div className="p-3 md:p-4">
