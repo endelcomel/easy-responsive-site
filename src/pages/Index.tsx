@@ -3,33 +3,61 @@ import NewsSlider from '../components/NewsSlider';
 import NewsCard from '../components/NewsCard';
 import AdPlaceholder from '../components/AdPlaceholder';
 
+// Data artikel terbaru dari semua kategori
 const latestNews = [
   {
     id: 1,
-    title: "Perkembangan Ekonomi Digital di Indonesia Tahun 2024",
-    image: "https://picsum.photos/400/300?random=4",
-    category: "Teknologi",
-    excerpt: "Pertumbuhan ekonomi digital Indonesia mencapai angka signifikan di tahun 2024...",
-    url: "/teknologi/1",
-    date: "2024-02-20"
+    title: "Persib Bandung Puncaki Klasemen Liga 1",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
+    category: "Sport",
+    excerpt: "Persib Bandung berhasil mengambil alih puncak klasemen Liga 1 setelah meraih kemenangan penting...",
+    url: "/sport/sepakbola",
+    date: "21 Feb 2024"
   },
   {
     id: 2,
-    title: "Liga 1 Indonesia: Persib vs Persija",
-    image: "https://picsum.photos/400/300?random=5",
-    category: "Sport",
-    excerpt: "Derby panas antara Persib Bandung melawan Persija Jakarta berakhir dengan...",
-    url: "/sport/1",
-    date: "2024-02-20"
+    title: "Pembangunan Infrastruktur di Indonesia Timur Dipercepat",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop&q=80",
+    category: "Nasional",
+    excerpt: "Pemerintah mengumumkan percepatan pembangunan infrastruktur di wilayah Indonesia Timur untuk pemerataan pembangunan...",
+    url: "/news/nasional",
+    date: "21 Feb 2024"
   },
   {
     id: 3,
-    title: "Film Indonesia Raih Penghargaan Internasional",
-    image: "https://picsum.photos/400/300?random=6",
+    title: "Perkembangan AI di Indonesia Semakin Pesat",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format&fit=crop&q=80",
+    category: "Teknologi",
+    excerpt: "Startup teknologi Indonesia mulai mengembangkan solusi AI untuk berbagai sektor industri...",
+    url: "/teknologi",
+    date: "21 Feb 2024"
+  },
+  {
+    id: 4,
+    title: "Film Indonesia Raih Penghargaan di Festival Film Internasional",
+    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&auto=format&fit=crop&q=80",
     category: "Entertainment",
     excerpt: "Film karya anak bangsa kembali mengharumkan nama Indonesia di kancah internasional...",
-    url: "/entertainment/1",
-    date: "2024-02-20"
+    url: "/entertainment",
+    date: "21 Feb 2024"
+  },
+  {
+    id: 5,
+    title: "Update Ekonomi Digital Indonesia 2024",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+    category: "Ekonomi",
+    excerpt: "Perkembangan ekonomi digital Indonesia menunjukkan tren positif di awal tahun 2024...",
+    url: "/news/ekonomi",
+    date: "21 Feb 2024"
+  },
+  {
+    id: 6,
+    title: "Prestasi Atlet Muda Indonesia di Kejuaraan Asia",
+    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&auto=format&fit=crop&q=80",
+    category: "Sport",
+    excerpt: "Atlet muda Indonesia berhasil meraih berbagai medali di Kejuaraan Asia 2024...",
+    url: "/sport/umum",
+    date: "21 Feb 2024"
   }
 ];
 
@@ -42,7 +70,6 @@ const Index = () => {
         <div className="max-w-[1400px] mx-auto">
           <NewsSlider />
           
-          {/* Ad Section 1 */}
           <div className="my-4 md:my-8">
             <AdPlaceholder 
               className="w-full h-[100px] md:h-[250px] bg-gray-100 rounded-lg" 
@@ -51,7 +78,6 @@ const Index = () => {
             />
           </div>
 
-          {/* Latest News Section */}
           <section className="my-4 md:my-8">
             <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Berita Terkini</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -61,7 +87,6 @@ const Index = () => {
             </div>
           </section>
 
-          {/* Ad Section 2 */}
           <div className="my-4 md:my-8">
             <AdPlaceholder 
               className="w-full h-[100px] md:h-[250px] bg-gray-100 rounded-lg"
@@ -84,8 +109,8 @@ const Index = () => {
             <div>
               <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Kategori</h3>
               <ul className="space-y-2">
-                <li><a href="/news" className="text-sm md:text-base text-gray-300 hover:text-white">News</a></li>
-                <li><a href="/sport" className="text-sm md:text-base text-gray-300 hover:text-white">Sport</a></li>
+                <li><a href="/news/nasional" className="text-sm md:text-base text-gray-300 hover:text-white">News</a></li>
+                <li><a href="/sport/sepakbola" className="text-sm md:text-base text-gray-300 hover:text-white">Sport</a></li>
                 <li><a href="/teknologi" className="text-sm md:text-base text-gray-300 hover:text-white">Teknologi</a></li>
                 <li><a href="/entertainment" className="text-sm md:text-base text-gray-300 hover:text-white">Entertainment</a></li>
               </ul>
