@@ -11,7 +11,7 @@ const latestNews = [
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     category: "Sport",
     excerpt: "Persib Bandung berhasil mengambil alih puncak klasemen Liga 1 setelah meraih kemenangan penting...",
-    url: "/sport/sepakbola",
+    url: "/sport/sepakbola/persib-klasemen",
     date: "21 Feb 2024"
   },
   {
@@ -20,7 +20,7 @@ const latestNews = [
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop&q=80",
     category: "Nasional",
     excerpt: "Pemerintah mengumumkan percepatan pembangunan infrastruktur di wilayah Indonesia Timur untuk pemerataan pembangunan...",
-    url: "/news/nasional",
+    url: "/news/nasional/pembangunan-infrastruktur",
     date: "21 Feb 2024"
   },
   {
@@ -29,7 +29,7 @@ const latestNews = [
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format&fit=crop&q=80",
     category: "Teknologi",
     excerpt: "Startup teknologi Indonesia mulai mengembangkan solusi AI untuk berbagai sektor industri...",
-    url: "/teknologi",
+    url: "/teknologi/ai-indonesia",
     date: "21 Feb 2024"
   },
   {
@@ -38,7 +38,7 @@ const latestNews = [
     image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&auto=format&fit=crop&q=80",
     category: "Entertainment",
     excerpt: "Film karya anak bangsa kembali mengharumkan nama Indonesia di kancah internasional...",
-    url: "/entertainment",
+    url: "/entertainment/film-indonesia-penghargaan",
     date: "21 Feb 2024"
   },
   {
@@ -47,7 +47,7 @@ const latestNews = [
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
     category: "Ekonomi",
     excerpt: "Perkembangan ekonomi digital Indonesia menunjukkan tren positif di awal tahun 2024...",
-    url: "/news/ekonomi",
+    url: "/news/ekonomi/update-ekonomi-digital",
     date: "21 Feb 2024"
   },
   {
@@ -56,7 +56,7 @@ const latestNews = [
     image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&auto=format&fit=crop&q=80",
     category: "Sport",
     excerpt: "Atlet muda Indonesia berhasil meraih berbagai medali di Kejuaraan Asia 2024...",
-    url: "/sport/umum",
+    url: "/sport/umum/prestasi-atlet-muda",
     date: "21 Feb 2024"
   }
 ];
